@@ -8,6 +8,6 @@ This package uses the [tree-sitter-ldpl](https://www.npmjs.com/package/tree-sitt
 
 ![Screenshot](screenshot.png)
 
-Example code taken from Lartu/ldp.
+Example code taken from the [LDPL repo](https://github.com/Lartu/ldpl/tree/master/examples).
 
 Syntax theme: [Atom Dark](https://atom.io/themes/atom-dark-syntax)

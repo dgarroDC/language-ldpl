@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/dgarroDC/language-ldpl#readme",
   "dependencies": {
-    "tree-sitter-ldpl": "^1.1.0"
+    "tree-sitter-ldpl": "^1.1.1"
   }
 }

@@ -62,7 +62,7 @@ scopes:
     'identifier': 'variable'
 
     '''
-    sub_proc > identifier,
+    sub_proc_begin > identifier,
     call_sub > identifier,
     call_ext > identifier
     ''': 'entity.name.function'

@@ -70,5 +70,35 @@ scopes:
     'rel_op': 'keyword.operator'
     'type': 'storage.type'
 
+folds: [
+    {
+        type: "data_section"
+    }
+    {
+        type: "procedure_section"
+    }
+    {
+        type: "sub_proc"
+        start: {type: "sub_proc_begin"}
+        end: {type: "sub_proc_end"}
+    }
+    {
+        type: "if"
+        start: {type: "if_begin"}
+        end: {type: ["else", "else_if", "if_end"]}
+    }
+    {
+        type: "else_if"
+    }
+    {
+        type: "else"
+    }
+    {
+        type: "while"
+        start: {type: "while_begin"}
+        end: {type: "while_end"}
+    }
+]
+
 comments:
     'start': '#'

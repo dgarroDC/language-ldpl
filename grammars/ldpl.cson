@@ -1,0 +1,74 @@
+name: 'LDPL'
+scopeName: 'source.ldpl'
+type: 'tree-sitter'
+parser: 'tree-sitter-ldpl'
+
+fileTypes: [
+    'ldpl'
+    'lsc'
+]
+
+scopes:
+    'comment': 'comment'
+
+    '''
+    data_label,
+    procedure_label,
+    var_definition,
+    sub_proc,
+    store,
+    if,
+    while,
+    break,
+    continue,
+    call_sub,
+    call_ext,
+    return,
+    exit,
+    wait,
+    goto,
+    label,
+    add,
+    subtract,
+    multiply,
+    divide,
+    modulo,
+    abs,
+    store_random,
+    floor,
+    ceil,
+    join,
+    get_char,
+    store_length,
+    store_char,
+    store_char_code,
+    in_join,
+    display,
+    accept,
+    execute,
+    excecute_store_output,
+    excecute_store_exit_code,
+    accept_until_eof,
+    load_file,
+    write_file,
+    append_file
+    ''': 'keyword'
+
+    'identifier': 'variable'
+
+    '''
+    sub_proc > identifier,
+    call_sub > identifier,
+    call_ext > identifier
+    ''': 'entity.name.function'
+
+    'number': 'constant.numeric'
+    'text': 'string.quoted'
+    'escape_sequence': 'constant.character.escape'
+    'crlf': 'constant.other.symbol'
+
+    'rel_op': 'keyword.operator'
+    'type': 'storage.type'
+
+comments:
+    'start': '#'

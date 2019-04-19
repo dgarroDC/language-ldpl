@@ -1,0 +1,22 @@
+{
+  "name": "language-ldpl",
+  "version": "1.0.0",
+  "description": "LDPL support for Atom",
+  "repository": "github:dgarroDC/language-ldpl",
+  "keywords": [
+    "LDPL",
+    "atom"
+  ],
+  "author": "Damián Garro",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/dgarroDC/language-ldpl/issues"
+  },
+  "homepage": "https://github.com/dgarroDC/language-ldpl#readme",
+  "dependencies": {
+      "tree-sitter-ldpl": "^1.0.2"
+  }
+}

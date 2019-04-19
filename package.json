@@ -1,6 +1,6 @@
 {
   "name": "language-ldpl",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "LDPL support for Atom",
   "repository": "https://github.com/dgarroDC/language-ldpl",
   "keywords": [
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/dgarroDC/language-ldpl#readme",
   "dependencies": {
-      "tree-sitter-ldpl": "^1.1.0"
+    "tree-sitter-ldpl": "^1.1.0"
   }
 }

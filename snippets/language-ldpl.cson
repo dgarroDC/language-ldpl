@@ -1,0 +1,223 @@
+'.source.ldpl':
+    # Structure
+    'DATA & PROCEDURE':
+        'prefix': 'data'
+        'body':
+            """
+            DATA:
+            $1
+            PROCEDURE:
+            $2
+            """
+    'PROCEDURE':
+        'prefix': 'procedure'
+        'body':
+            """
+            PROCEDURE:
+            $1
+            """
+    'sub-procedure':
+        'prefix': 'sub'
+        'body':
+            """
+            sub-procedure ${1:mySubprocedure}
+                $2
+            end sub-procedure
+            """
+
+    # Variables declaration
+    'var is type':
+        'prefix': 'var'
+        'body': '${1:myVar} is ${2:number}'
+    'is type':
+        'prefix': 'is'
+        'body': 'is ${1:number}'
+    'number':
+        'prefix': 'number'
+        'body': 'number'
+    'text':
+        'prefix': 'text'
+        'body': 'text'
+    'number vector':
+        'prefix': 'nv'
+        'body': 'number vector'
+    'text vector':
+        'prefix': 'tv'
+        'body': 'text vector'
+    'vector':
+        'prefix': 'vector'
+        'body': 'vector'
+    'external':
+        'prefix': 'external'
+        'body': 'external'
+
+    # Relational operators
+    'equal to':
+        'prefix': 'eq'
+        'body': 'equal to'
+    'not equal to':
+        'prefix': 'ne'
+        'body': 'not equal to'
+    'greater than':
+        'prefix': 'gt'
+        'body': 'greater than'
+    'less than':
+        'prefix': 'lt'
+        'body': 'less than'
+    'greater than or equal to':
+        'prefix': 'ge'
+        'body': 'greater than or equal to'
+    'less than or equal to':
+        'prefix': 'le'
+        'body': 'less than or equal to'
+
+    # Control flow statements
+    'store - in':
+        'prefix': 'store'
+        'body': 'store ${1:value} in ${2:myVar}'
+    'if - is - then':
+        'prefix': 'if'
+        'body':
+            """
+            if ${1:value} is ${2:equal to} ${3:value} then
+                $4
+            end if
+            """
+    'if - is - then - else':
+        'prefix': 'ife'
+        'body':
+            """
+            if ${1:value} is ${2:equal to} ${3:value} then
+                $4
+            else
+                $5
+            end if
+            """
+    'if - is - then - else if - else':
+        'prefix': 'ifeie'
+        'body':
+            """
+            if ${1:value} is ${2:equal to} ${3:value} then
+                $4
+            else if ${5:value} is ${6:equal to} ${7:value} then
+                $8
+            else
+                $9
+            end if
+            """
+    'while - is - do':
+        'prefix': 'while'
+        'body':
+            """
+            while ${1:value} is ${2:equal to} ${3:value} do
+                $4
+            repeat
+            """
+    'break':
+        'prefix': 'br'
+        'body': 'break'
+    'continue':
+        'prefix': 'cont'
+        'body': 'continue'
+    'call':
+        'prefix': 'call'
+        'body': 'call ${1:mySubprocedure}'
+    'call sub-pocedure':
+        'prefix': 'cs'
+        'body': 'call sub-procedure ${1:mySubprocedure}'
+    'call external':
+        'prefix': 'ce'
+        'body': 'call external ${1:mySubprocedure}'
+    'return':
+        'prefix': 'ret'
+        'body': 'return'
+    'exit':
+        'prefix': 'exit'
+        'body': 'exit'
+    'wait - milliseconds':
+        'prefix': 'wait'
+        'body': 'wait ${1:number} milliseconds'
+    'goto':
+        'prefix': 'go'
+        'body': 'goto ${1:myLabel}'
+    'label':
+        'prefix': 'lab'
+        'body': 'label ${1:myLabel}'
+
+    # Arithmetic statements
+    'add - and - in':
+        'prefix': 'add'
+        'body': 'add ${1:number} and ${2:number} in ${3:myNumberVar}'
+    'subtract - from - in':
+        'prefix': 'subtract'
+        'body': 'subtract ${1:number} from ${2:number} in ${3:myNumberVar}'
+    'multiply - by - in':
+        'prefix': 'multiply'
+        'body': 'multiply ${1:number} by ${2:number} in ${3:myNumberVar}'
+    'divide - by - in':
+        'prefix': 'divide'
+        'body': 'divide ${1:number} by ${2:number} in ${3:myNumberVar}'
+    'modulo - by - in':
+        'prefix': 'divide'
+        'body': 'modulo ${1:number} by ${2:number} in ${3:myNumberVar}'
+    'abs':
+        'prefix': 'abs'
+        'body': 'abs ${1:myNumberVar}'
+    'store random in':
+        'prefix': 'rand'
+        'body': 'store random in ${1:myNumberVar}'
+    'floor':
+        'prefix': 'fl'
+        'body': 'floor ${1:myNumberVar}'
+    'ceil':
+        'prefix': 'ce'
+        'body': 'ceil ${1:myNumberVar}'
+
+    # Text statements
+    'join - and - in':
+        'prefix': 'join'
+        'body': 'join ${1:value} and ${2:value} in ${3:myTextVar}'
+    'get character at - from - in':
+        'prefix': 'gchar'
+        'body': 'get character at ${1:number} from ${2:text} in ${3:myTextVar}'
+    'store length of - in':
+        'prefix': 'slength'
+        'body': 'store length of ${1:text} in ${2:myNumberVar}'
+    'store character - in':
+        'prefix': 'schar'
+        'body': 'store character ${1:number} in ${2:myTextVar}'
+    'store character code of - in':
+        'prefix': 'scode'
+        'body': 'store character code of ${1:text} in ${2:myNumberVar}'
+    'in - join':
+        'prefix': 'in'
+        'body': 'in ${1:myTextVar} join ${2:value} ${3:value...}'
+
+    # IO statements
+    'display':
+        'prefix': 'disp'
+        'body': 'display ${1:value...}'
+    'accept':
+        'prefix': 'acc'
+        'body': 'accept ${1:myVar}'
+    'execute':
+        'prefix': 'exec'
+        'body': 'execute ${1:text}'
+    'execute - and store output in':
+        'prefix': 'exout'
+        'body': 'execute ${1:text} and store output in ${2:myTextVar}'
+    'execute - and store exit code in':
+        'prefix': 'excode'
+        'body': 'execute ${1:text} and store exit code in ${2:myNumVar}'
+    'accept - until eof':
+        'prefix': 'aceof'
+        'body': 'accept ${1:myTextVar} until eof'
+    'load file - in':
+        'prefix': 'load',
+        'body': 'load file ${1:text} in ${2:myTextVar}'
+    'write - to file':
+        'prefix': 'write',
+        'body': 'write ${1:value} to file ${2:text}'
+    'append - to file':
+        'prefix': 'append',
+        'body': 'append ${1:value} to file ${2:text}'

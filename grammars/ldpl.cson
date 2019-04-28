@@ -71,7 +71,7 @@ scopes:
 
     'number': 'constant.numeric'
     'text': 'string.quoted.double'
-    'quote' 'string.unquoted'
+    'quote': 'string.unquoted'
     'escape_sequence': 'constant.character.escape'
     'crlf': 'constant.other.symbol'
 

@@ -1,13 +1,20 @@
 '.source.ldpl':
     # Structure
     'DATA & PROCEDURE':
-        'prefix': 'data'
+        'prefix': 'dapro'
         'body':
             """
             DATA:
             $1
             PROCEDURE:
             $2
+            """
+    'DATA':
+        'prefix': 'data'
+        'body':
+            """
+            DATA:
+            $1
             """
     'PROCEDURE':
         'prefix': 'procedure'

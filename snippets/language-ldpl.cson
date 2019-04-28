@@ -158,7 +158,7 @@
         'prefix': 'divide'
         'body': 'divide ${1:number} by ${2:number} in ${3:myNumberVar}'
     'modulo - by - in':
-        'prefix': 'divide'
+        'prefix': 'modulo'
         'body': 'modulo ${1:number} by ${2:number} in ${3:myNumberVar}'
     'abs':
         'prefix': 'abs'

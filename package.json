@@ -1,6 +1,6 @@
 {
   "name": "language-ldpl",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "LDPL support for Atom",
   "repository": "https://github.com/dgarroDC/language-ldpl",
   "keywords": [

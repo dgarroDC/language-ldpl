@@ -14,7 +14,7 @@ scopes:
     '''
     data_label,
     procedure_label,
-    var_definition,
+    var_declaration,
     sub_proc_begin,
     sub_proc_end,
     store,

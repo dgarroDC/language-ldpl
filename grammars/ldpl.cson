@@ -47,6 +47,8 @@ scopes:
     store_length,
     store_char,
     store_char_code,
+    store_quote_begin,
+    store_quote_end,
     in_join,
     display,
     accept,
@@ -68,7 +70,8 @@ scopes:
     ''': 'entity.name.function'
 
     'number': 'constant.numeric'
-    'text': 'string.quoted'
+    'text': 'string.quoted.double'
+    'quote' 'string.unquoted'
     'escape_sequence': 'constant.character.escape'
     'crlf': 'constant.other.symbol'
 

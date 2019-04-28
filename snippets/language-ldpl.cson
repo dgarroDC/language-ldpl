@@ -189,6 +189,14 @@
     'store character code of - in':
         'prefix': 'scode'
         'body': 'store character code of ${1:text} in ${2:myNumberVar}'
+    'store quote - in':
+        'prefix': 'quote'
+        'body':
+            '''
+            store quote ${1:myTextVar} in
+                $2
+            end quote
+            '''
     'in - join':
         'prefix': 'in'
         'body': 'in ${1:myTextVar} join ${2:value} ${3:value...}'
